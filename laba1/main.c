@@ -17,9 +17,13 @@ float calcRoot(float D, float a, float b);
 
 int main(int argc, char *argv[]) {
 		
-	float a = 10;
-	float b = -20;
-	float c = 3;
+	printf("vvedite a, b, c\n");
+		
+	float a, b, c;
+	
+	scanf("%f", &a);
+	scanf("%f", &b);	
+	scanf("%f", &c);
 	
 	float x1, x2, d;
 	d = b*b - 4*a*c;
@@ -44,10 +48,7 @@ int main(int argc, char *argv[]) {
 		printf("x1 = %1f\n", x1);
 		printf("x2 = %1f\n", x2);		
 	}
-	
-	
-	
-	
+		
 	return 0;
 }
 
