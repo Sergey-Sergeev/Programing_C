@@ -12,6 +12,9 @@
 
  run this program using the console pauser or add your own getch, system("pause") or input loop */
 
+
+float calcRoot(float D, float a, float b);
+
 int main(int argc, char *argv[]) {
 		
 	float a = 10;
@@ -20,14 +23,36 @@ int main(int argc, char *argv[]) {
 	
 	float x1, x2, d;
 	d = b*b - 4*a*c;
-	x1 = (-b + sqrt(d)) / 2;
-	x2 = (-b - sqrt(d)) / 2;
 	
 	printf("d = %1f\n", d);
 	
-	printf("x1 = %1f\n", x1);
-	printf("x2 = %1f\n", x2);
+	if(d < 0)
+	{
+		printf("korney net\n");
+	}
+	else if(d == 0)
+	{
+		printf("koren odin\n");
+		x1 = calcRoot(d, a, b);
+		printf("x1 = %1f\n", x1);		
+	}
+	else
+	{
+		printf("korenia dva\n");
+		x1 = calcRoot(d, a, b);
+		x2 = calcRoot(d, a, -b);
+		printf("x1 = %1f\n", x1);
+		printf("x2 = %1f\n", x2);		
+	}
+	
+	
 	
 	
 	return 0;
 }
+
+float calcRoot(float D, float a, float b)
+{
+	return (float)((-b + sqrt(D)) / (2 * a));
+}
+
